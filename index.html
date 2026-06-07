@@ -329,6 +329,298 @@
       background: var(--mustard);
     }
 
+    .menu-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .add-btn,
+    .cart-action,
+    .icon-btn {
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 950;
+    }
+
+    .add-btn {
+      min-height: 42px;
+      padding: 0 14px;
+      color: #fff;
+      background: var(--red);
+    }
+
+    .featured .add-btn {
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .cart-fab {
+      position: fixed;
+      z-index: 30;
+      right: 18px;
+      bottom: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 8px;
+      color: #211610;
+      background: var(--mustard);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, .22);
+      cursor: pointer;
+      font-weight: 950;
+    }
+
+    .cart-count {
+      display: grid;
+      min-width: 26px;
+      height: 26px;
+      place-items: center;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--red);
+      font-size: 13px;
+    }
+
+    .cart-panel,
+    .customizer {
+      position: fixed;
+      z-index: 40;
+      inset: 0;
+      display: none;
+      background: rgba(25, 21, 19, .58);
+    }
+
+    .cart-panel.is-open,
+    .customizer.is-open {
+      display: grid;
+    }
+
+    .cart-sheet {
+      width: min(460px, 100%);
+      height: 100%;
+      margin-left: auto;
+      overflow: auto;
+      padding: 24px;
+      background: var(--paper);
+      box-shadow: -20px 0 60px rgba(0, 0, 0, .25);
+    }
+
+    .cart-head,
+    .modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .cart-head h2,
+    .modal-head h2 {
+      font-size: 30px;
+    }
+
+    .icon-btn {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .cart-empty {
+      padding: 24px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      color: rgba(25, 21, 19, .68);
+      background: #fff;
+      line-height: 1.5;
+    }
+
+    .cart-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .cart-item {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .cart-item-top,
+    .cart-item-controls,
+    .cart-total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .cart-item h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .cart-item p {
+      margin: 8px 0 0;
+      color: rgba(25, 21, 19, .64);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .qty {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .qty button {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--cream);
+      cursor: pointer;
+      font-weight: 950;
+    }
+
+    .cart-total {
+      position: sticky;
+      bottom: -24px;
+      margin: 20px -24px -24px;
+      padding: 20px 24px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+      box-shadow: 0 -14px 35px rgba(41, 21, 9, .08);
+    }
+
+    .cart-total strong {
+      display: block;
+      font-size: 28px;
+    }
+
+    .checkout-form {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .checkout-form label {
+      display: grid;
+      gap: 6px;
+      color: rgba(25, 21, 19, .68);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .checkout-form input,
+    .checkout-form textarea,
+    .checkout-form select {
+      width: 100%;
+      min-height: 44px;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .checkout-form textarea {
+      min-height: 86px;
+      resize: vertical;
+    }
+
+    .cart-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 48px;
+      padding: 0 16px;
+      color: #fff;
+      background: var(--red);
+    }
+
+    .cart-action.alt {
+      color: var(--ink);
+      background: var(--mustard);
+    }
+
+    .cart-action:disabled {
+      cursor: not-allowed;
+      opacity: .55;
+    }
+
+    .payment-note {
+      margin: 10px 0 0;
+      color: rgba(25, 21, 19, .62);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .modal-card {
+      align-self: center;
+      justify-self: center;
+      width: min(620px, calc(100% - 28px));
+      max-height: calc(100vh - 28px);
+      overflow: auto;
+      padding: 24px;
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .option-group {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .option-group h3 {
+      margin: 0;
+      font-size: 19px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .option input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--red);
+    }
+
+    .option span:last-child {
+      color: var(--red);
+      font-weight: 950;
+    }
+
     .experience {
       color: #fff;
       background: var(--char);
@@ -594,53 +886,71 @@
           <p>Precios publicados en DiDi Food México. El restaurante también maneja opciones para crear tu hamburguesa a tu gusto.</p>
         </div>
         <div class="menu-grid">
-          <article class="menu-item featured">
+          <article class="menu-item featured" data-id="boom-smash-doble">
             <div>
               <small>Especial de la casa</small>
               <h3>Boom Smash Doble</h3>
               <p>Pan brioche, carne de res, queso monterrey, queso americano, cebolla caramelizada, tocino, pepinillos, aderezo de ajo y habanero confitado.</p>
             </div>
-            <span class="price">MX$169</span>
+            <div class="menu-actions">
+              <span class="price">MX$169</span>
+              <button class="add-btn" type="button">Agregar</button>
+            </div>
           </article>
-          <article class="menu-item">
+          <article class="menu-item" data-id="clasic-smash-sencilla">
             <div>
               <small>Clásica</small>
               <h3>Clasic Smash Sencilla</h3>
               <p>Pan brioche, carne de res, queso amarillo, cebolla caramelizada, tocino y aderezo clásico de la casa.</p>
             </div>
-            <span class="price">MX$139</span>
+            <div class="menu-actions">
+              <span class="price">MX$139</span>
+              <button class="add-btn" type="button">Agregar</button>
+            </div>
           </article>
-          <article class="menu-item">
+          <article class="menu-item" data-id="jalapeno-ranch-sencilla">
             <div>
               <small>Picante</small>
               <h3>Jalapeño Ranch</h3>
               <p>Carne de res, queso americano, cebolla caramelizada, jalapeños curtidos y aderezo jalapeño ranch.</p>
             </div>
-            <span class="price">MX$139 / $169</span>
+            <div class="menu-actions">
+              <span class="price">MX$139+</span>
+              <button class="add-btn" type="button">Agregar</button>
+            </div>
           </article>
-          <article class="menu-item">
+          <article class="menu-item" data-id="mexican-style-sencilla">
             <div>
               <small>Mexicana</small>
               <h3>Mexican Style</h3>
               <p>Pan brioche con carne de res, cebolla caramelizada, queso monterrey, aguacate, chiles curtidos y aderezo de chipotle.</p>
             </div>
-            <span class="price">MX$139 / $169</span>
+            <div class="menu-actions">
+              <span class="price">MX$139+</span>
+              <button class="add-btn" type="button">Agregar</button>
+            </div>
           </article>
-          <article class="menu-item">
+          <article class="menu-item" data-id="animal-fries">
             <div>
               <small>Para compartir</small>
               <h3>Animal Fries</h3>
               <p>Papas fritas con cebolla caramelizada, carne de res, jalapeños curtidos y aderezo clásico.</p>
             </div>
-            <span class="price">MX$169</span>
+            <div class="menu-actions">
+              <span class="price">MX$169</span>
+              <button class="add-btn" type="button">Agregar</button>
+            </div>
           </article>
-          <article class="menu-item">
+          <article class="menu-item" data-id="pan-y-carne">
             <div>
               <small>Crea tu combo</small>
               <h3>Pan y Carne</h3>
               <p>Base para crear tu hamburguesa, con opción de pollo grill y papas con queso.</p>
             </div>
-            <span class="price">Desde MX$75</span>
+            <div class="menu-actions">
+              <span class="price">Desde MX$75</span>
+              <button class="add-btn" type="button">Agregar</button>
+            </div>
           </article>
         </div>
       </div>
@@ -736,9 +1046,342 @@
     </section>
   </main>
 
+  <button class="cart-fab" type="button" id="open-cart" aria-label="Abrir carrito">
+    Carrito <span class="cart-count" id="cart-count">0</span>
+  </button>
+
+  <div class="customizer" id="customizer" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="custom-title">
+      <div class="modal-head">
+        <h2 id="custom-title">Personaliza</h2>
+        <button class="icon-btn" type="button" id="close-customizer" aria-label="Cerrar">X</button>
+      </div>
+      <p id="custom-description" class="payment-note"></p>
+      <div class="option-group" id="size-options"></div>
+      <div class="option-group" id="remove-options"></div>
+      <div class="option-group" id="extra-options"></div>
+      <div class="checkout-form">
+        <label>
+          Mensaje para cocina
+          <textarea id="item-note" placeholder="Ej. bien dorada, salsa aparte, sin picante"></textarea>
+        </label>
+        <button class="cart-action alt" type="button" id="save-item">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <aside class="cart-panel" id="cart-panel" aria-hidden="true">
+    <div class="cart-sheet" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="cart-head">
+        <h2 id="cart-title">Tu pedido</h2>
+        <button class="icon-btn" type="button" id="close-cart" aria-label="Cerrar carrito">X</button>
+      </div>
+      <div id="cart-list" class="cart-list"></div>
+      <form class="checkout-form" id="checkout-form">
+        <label>
+          Nombre
+          <input id="customer-name" autocomplete="name" placeholder="Tu nombre" required>
+        </label>
+        <label>
+          Hora de recolección
+          <select id="pickup-time" required>
+            <option value="">Selecciona una hora</option>
+            <option>Lo antes posible</option>
+            <option>En 20 minutos</option>
+            <option>En 30 minutos</option>
+            <option>En 45 minutos</option>
+            <option>En 1 hora</option>
+          </select>
+        </label>
+        <label>
+          Mensaje del pedido
+          <textarea id="order-note" placeholder="Ej. llevo cambio, quiero servilletas extra"></textarea>
+        </label>
+        <button class="cart-action" type="submit">Enviar pedido por WhatsApp</button>
+        <button class="cart-action alt" type="button" disabled>Pago en línea por conectar</button>
+        <p class="payment-note">Para cobrar antes de recoger se conecta después Mercado Pago, Stripe u otro proveedor con la cuenta del restaurante. Esta versión ya arma el pedido y lo manda listo por WhatsApp.</p>
+      </form>
+      <div class="cart-total">
+        <span>Total estimado</span>
+        <strong id="cart-total">MX$0</strong>
+      </div>
+    </div>
+  </aside>
+
   <footer>
     <strong>Boom Smash Burguer</strong>
     <span>Landing de muestra creada con información pública consultada el 7 de junio de 2026.</span>
   </footer>
+  <script>
+    const phoneNumber = "526143434071";
+    const products = {
+      "boom-smash-doble": {
+        name: "Boom Smash Doble",
+        description: "Queso monterrey, queso americano, tocino, pepinillos, ajo y habanero confitado.",
+        sizes: [{ label: "Doble", price: 169 }],
+        remove: ["Sin cebolla caramelizada", "Sin tocino", "Sin pepinillos", "Sin habanero"],
+        extras: [
+          { label: "Extra queso", price: 18 },
+          { label: "Extra tocino", price: 25 },
+          { label: "Extra carne", price: 45 },
+          { label: "Papas a la francesa", price: 45 }
+        ]
+      },
+      "clasic-smash-sencilla": {
+        name: "Clasic Smash",
+        description: "Pan brioche, carne de res, queso amarillo, tocino y aderezo clasico.",
+        sizes: [{ label: "Sencilla", price: 139 }, { label: "Doble", price: 169 }],
+        remove: ["Sin cebolla caramelizada", "Sin tocino", "Sin aderezo"],
+        extras: [
+          { label: "Extra queso", price: 18 },
+          { label: "Extra tocino", price: 25 },
+          { label: "Extra carne", price: 45 },
+          { label: "Papas a la francesa", price: 45 }
+        ]
+      },
+      "jalapeno-ranch-sencilla": {
+        name: "Jalapeno Ranch",
+        description: "Queso americano, cebolla caramelizada, jalapenos curtidos y aderezo ranch.",
+        sizes: [{ label: "Sencilla", price: 139 }, { label: "Doble", price: 169 }],
+        remove: ["Sin cebolla caramelizada", "Sin jalapenos", "Sin aderezo ranch"],
+        extras: [
+          { label: "Extra queso", price: 18 },
+          { label: "Extra tocino", price: 25 },
+          { label: "Extra carne", price: 45 },
+          { label: "Papas a la francesa", price: 45 }
+        ]
+      },
+      "mexican-style-sencilla": {
+        name: "Mexican Style",
+        description: "Queso monterrey, aguacate, chiles curtidos y aderezo de chipotle.",
+        sizes: [{ label: "Sencilla", price: 139 }, { label: "Doble", price: 169 }],
+        remove: ["Sin cebolla caramelizada", "Sin aguacate", "Sin chiles curtidos", "Sin chipotle"],
+        extras: [
+          { label: "Extra queso", price: 18 },
+          { label: "Extra aguacate", price: 25 },
+          { label: "Extra carne", price: 45 },
+          { label: "Papas a la francesa", price: 45 }
+        ]
+      },
+      "animal-fries": {
+        name: "Animal Fries",
+        description: "Papas fritas con carne de res, jalapenos, cebolla caramelizada y aderezo clasico.",
+        sizes: [{ label: "Orden", price: 169 }],
+        remove: ["Sin cebolla caramelizada", "Sin jalapenos", "Sin aderezo"],
+        extras: [
+          { label: "Extra queso", price: 18 },
+          { label: "Extra carne", price: 45 },
+          { label: "Extra tocino", price: 25 }
+        ]
+      },
+      "pan-y-carne": {
+        name: "Pan y Carne",
+        description: "Base para crear tu hamburguesa.",
+        sizes: [{ label: "Res", price: 75 }, { label: "Chicken Grill", price: 85 }],
+        remove: ["Sin queso", "Sin aderezo", "Sin cebolla"],
+        extras: [
+          { label: "Extra queso", price: 18 },
+          { label: "Extra tocino", price: 25 },
+          { label: "Extra carne", price: 45 },
+          { label: "Papas con queso", price: 115 }
+        ]
+      }
+    };
+
+    const cart = [];
+    let currentProductId = null;
+    let editingIndex = null;
+
+    const money = value => `MX$${value}`;
+    const cartPanel = document.querySelector("#cart-panel");
+    const customizer = document.querySelector("#customizer");
+    const cartList = document.querySelector("#cart-list");
+    const cartTotal = document.querySelector("#cart-total");
+    const cartCount = document.querySelector("#cart-count");
+
+    function itemPrice(item) {
+      return (item.size.price + item.extras.reduce((sum, extra) => sum + extra.price, 0)) * item.qty;
+    }
+
+    function renderCustomizer(productId, item = null, index = null) {
+      currentProductId = productId;
+      editingIndex = index;
+      const product = products[productId];
+      document.querySelector("#custom-title").textContent = product.name;
+      document.querySelector("#custom-description").textContent = product.description;
+      document.querySelector("#item-note").value = item?.note || "";
+
+      const selectedSize = item?.size.label || product.sizes[0].label;
+      document.querySelector("#size-options").innerHTML = `
+        <h3>Tamaño</h3>
+        ${product.sizes.map(size => `
+          <label class="option">
+            <span>${size.label}</span>
+            <span>${money(size.price)}</span>
+            <input type="radio" name="size" value="${size.label}" ${size.label === selectedSize ? "checked" : ""}>
+          </label>
+        `).join("")}
+      `;
+
+      document.querySelector("#remove-options").innerHTML = `
+        <h3>Quitar ingredientes</h3>
+        ${product.remove.map(option => `
+          <label class="option">
+            <span>${option}</span>
+            <span>Sin costo</span>
+            <input type="checkbox" name="remove" value="${option}" ${item?.remove.includes(option) ? "checked" : ""}>
+          </label>
+        `).join("")}
+      `;
+
+      document.querySelector("#extra-options").innerHTML = `
+        <h3>Extras</h3>
+        ${product.extras.map(extra => `
+          <label class="option">
+            <span>${extra.label}</span>
+            <span>+${money(extra.price)}</span>
+            <input type="checkbox" name="extra" value="${extra.label}" ${item?.extras.some(saved => saved.label === extra.label) ? "checked" : ""}>
+          </label>
+        `).join("")}
+      `;
+
+      document.querySelector("#save-item").textContent = item ? "Guardar cambios" : "Agregar al carrito";
+      customizer.classList.add("is-open");
+      customizer.setAttribute("aria-hidden", "false");
+    }
+
+    function closeCustomizer() {
+      customizer.classList.remove("is-open");
+      customizer.setAttribute("aria-hidden", "true");
+    }
+
+    function renderCart() {
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const total = cart.reduce((sum, item) => sum + itemPrice(item), 0);
+      cartCount.textContent = totalItems;
+      cartTotal.textContent = money(total);
+
+      if (!cart.length) {
+        cartList.innerHTML = `<div class="cart-empty">Tu carrito esta vacio. Agrega una burger del menu para empezar el pedido.</div>`;
+        return;
+      }
+
+      cartList.innerHTML = cart.map((item, index) => `
+        <article class="cart-item">
+          <div class="cart-item-top">
+            <h3>${item.name} ${item.size.label}</h3>
+            <strong>${money(itemPrice(item))}</strong>
+          </div>
+          <p>${item.remove.length ? item.remove.join(", ") : "Sin cambios"}${item.extras.length ? " | Extras: " + item.extras.map(extra => extra.label).join(", ") : ""}${item.note ? " | Nota: " + item.note : ""}</p>
+          <div class="cart-item-controls">
+            <div class="qty">
+              <button type="button" data-action="decrease" data-index="${index}">-</button>
+              <strong>${item.qty}</strong>
+              <button type="button" data-action="increase" data-index="${index}">+</button>
+            </div>
+            <button class="icon-btn" type="button" data-action="edit" data-index="${index}" aria-label="Editar">Editar</button>
+            <button class="icon-btn" type="button" data-action="remove" data-index="${index}" aria-label="Quitar">X</button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function openCart() {
+      renderCart();
+      cartPanel.classList.add("is-open");
+      cartPanel.setAttribute("aria-hidden", "false");
+    }
+
+    function closeCart() {
+      cartPanel.classList.remove("is-open");
+      cartPanel.setAttribute("aria-hidden", "true");
+    }
+
+    document.querySelectorAll(".menu-item[data-id] .add-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const productId = button.closest(".menu-item").dataset.id;
+        renderCustomizer(productId);
+      });
+    });
+
+    document.querySelector("#save-item").addEventListener("click", () => {
+      const product = products[currentProductId];
+      const sizeLabel = document.querySelector("input[name='size']:checked").value;
+      const size = product.sizes.find(option => option.label === sizeLabel);
+      const remove = Array.from(document.querySelectorAll("input[name='remove']:checked")).map(input => input.value);
+      const extras = Array.from(document.querySelectorAll("input[name='extra']:checked")).map(input => product.extras.find(extra => extra.label === input.value));
+      const note = document.querySelector("#item-note").value.trim();
+      const nextItem = { productId: currentProductId, name: product.name, size, remove, extras, note, qty: editingIndex === null ? 1 : cart[editingIndex].qty };
+
+      if (editingIndex === null) {
+        cart.push(nextItem);
+      } else {
+        cart[editingIndex] = nextItem;
+      }
+
+      closeCustomizer();
+      renderCart();
+      openCart();
+    });
+
+    cartList.addEventListener("click", event => {
+      const button = event.target.closest("button[data-action]");
+      if (!button) return;
+      const index = Number(button.dataset.index);
+      const action = button.dataset.action;
+      if (action === "increase") cart[index].qty += 1;
+      if (action === "decrease") cart[index].qty = Math.max(1, cart[index].qty - 1);
+      if (action === "remove") cart.splice(index, 1);
+      if (action === "edit") {
+        renderCustomizer(cart[index].productId, cart[index], index);
+        return;
+      }
+      renderCart();
+    });
+
+    document.querySelector("#open-cart").addEventListener("click", openCart);
+    document.querySelector("#close-cart").addEventListener("click", closeCart);
+    document.querySelector("#close-customizer").addEventListener("click", closeCustomizer);
+
+    cartPanel.addEventListener("click", event => {
+      if (event.target === cartPanel) closeCart();
+    });
+
+    customizer.addEventListener("click", event => {
+      if (event.target === customizer) closeCustomizer();
+    });
+
+    document.querySelector("#checkout-form").addEventListener("submit", event => {
+      event.preventDefault();
+      if (!cart.length) {
+        openCart();
+        return;
+      }
+
+      const name = document.querySelector("#customer-name").value.trim();
+      const pickup = document.querySelector("#pickup-time").value;
+      const orderNote = document.querySelector("#order-note").value.trim();
+      const lines = cart.map((item, index) => {
+        const custom = [
+          item.remove.length ? `Quitar: ${item.remove.join(", ")}` : "",
+          item.extras.length ? `Extras: ${item.extras.map(extra => extra.label).join(", ")}` : "",
+          item.note ? `Nota: ${item.note}` : ""
+        ].filter(Boolean).join(" | ");
+        return `${index + 1}. ${item.qty}x ${item.name} ${item.size.label} - ${money(itemPrice(item))}${custom ? ` (${custom})` : ""}`;
+      });
+      const total = cart.reduce((sum, item) => sum + itemPrice(item), 0);
+      const message = [
+        "Hola Boom Smash, quiero hacer un pedido para recoger:",
+        ...lines,
+        `Total estimado: ${money(total)}`,
+        `Nombre: ${name}`,
+        `Recoleccion: ${pickup}`,
+        orderNote ? `Mensaje: ${orderNote}` : ""
+      ].filter(Boolean).join("\n");
+      window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+    });
+
+    renderCart();
+  </script>
 </body>
 </html>
